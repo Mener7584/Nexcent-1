@@ -1,0 +1,274 @@
+/* ========================================FONTS======================================== */
+@font-face {
+	font-family: "Inter";
+	src: url(../fonts/Inter/Inter-Regular.woff2) format(woff2);
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Inter";
+	src: url(../fonts/Inter/Inter-Medium.woff2) format(woff2);
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Inter";
+	src: url(../fonts/Inter/Inter-SemiBold.woff2) format(woff2);
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* ========================================CSS RESET======================================== */
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Inter", Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	color: #717171;
+	line-height: 1.5;
+	overflow-x: hidden;
+}
+body.lock {
+	overflow: hidden;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	margin: 0 auto;
+	max-width: 90rem;
+}
+
+[class*="__container"] {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	max-width: 73.25rem;
+	padding-inline: 0.5rem;
+}
+
+.main {
+	flex: 1 1 auto;
+	padding-top: 40px;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+	height: auto;
+	user-select: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+	background-color: transparent;
+	color: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+li {
+	list-style: none;
+}
+
+.button {
+	border-radius: 0.25em;
+	min-width: 9.4375rem;
+	min-height: 3.25rem;
+	color: var(--white);
+	background-color: var(--green-main);
+}
+.button-white {
+	border-radius: 0.375em;
+	background-color: var(--silver);
+	color: var(--green-main);
+	/* min-width: 4.8125rem; */
+	min-width: 4.375rem;
+	min-height: 2.3rem;
+}
+.button-small {
+	border-radius: 0.375em;
+	/* min-width: 5.6875rem;*/
+	min-width: 5rem;
+	min-height: 2.3rem;
+}
+.button-fs14 {
+	font-size: 0.875rem;
+}
+
+:root {
+	--text-gray: #18191f;
+	--green-main: #4caf4f;
+	--silver: #f5f7fa;
+	--white: #ffffff;
+	--duration: 0.3s;
+}
+
+/* ========================================HEADER======================================== */
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: var(--silver);
+}
+.header__container {
+	position: relative;
+	justify-content: space-between;
+	min-height: 3rem;
+}
+.header__container::before {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 3rem;
+	background-color: var(--silver);
+}
+
+.header__logo {
+	width: 36px;
+	overflow: hidden;
+}
+.header__logo > svg {
+}
+
+.header__logo,
+.header__buttons {
+	z-index: 1;
+}
+
+.header__menu {
+}
+.menu-header {
+	padding-block: 3rem;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: -100%;
+	background-color: var(--green-main);
+	overflow: auto;
+	transition: right var(--duration);
+}
+.menu-header.active {
+	right: 0;
+}
+.menu-header__list {
+	text-align: center;
+}
+.menu-header__item {
+}
+.menu-header__link {
+	font-size: 2rem;
+	line-height: 2;
+	color: var(--white);
+}
+
+.header__buttons {
+	display: flex;
+	gap: 0.5rem;
+}
+.header__burger > svg {
+	display: block;
+}
+
+/* ========================================PAGE======================================== */
+
+/* ========================================FOOTER======================================== */
+
+/* ========================================MEDIA QUERIES======================================== */
+@media (min-width: 22.5em) {
+	.header__logo {
+		min-width: 140px;
+		width: 155px;
+	}
+	.header__logo > svg {
+		max-width: 100%;
+	}
+}
+@media (min-width: 48em) {
+	.header__container {
+		position: static;
+		min-height: 4rem;
+	}
+	.header__burger {
+		display: none;
+	}
+	.header__container::before {
+		content: none;
+	}
+	.menu-header {
+		padding-block: 0;
+		position: static;
+		width: auto;
+		height: auto;
+		background-color: transparent;
+		overflow: visible;
+		transition: none;
+	}
+	.menu-header__list {
+		display: flex;
+		gap: 0.8rem;
+	}
+	.menu-header__link {
+		font-size: 1rem;
+		line-height: 1.5;
+		color: var(--text-gray);
+	}
+}
+@media (min-width: 64em) {
+	.header__container {
+		min-height: 5.25rem;
+	}
+	.menu-header__list {
+		column-gap: 3.125rem;
+	}
+	.header__buttons {
+		column-gap: 0.875rem;
+	}
+}
