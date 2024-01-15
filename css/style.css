@@ -319,23 +319,26 @@ li {
         z-index: 1;
         top: 0;
         right: 0;
-        width: min(260rem, 100%);
+        width: 260rem;
         height: 100svh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-end;
-        overflow-y: auto;
+        overflow: auto;
         row-gap: 20rem;
         background-color: var(--color-primary);
         transition: tranform var(--transition-main);
         transform: translateX(100%);
         padding-block: calc(var(--header-min) + 2rem) 10rem;
-        will-change: auto;
         padding-inline: var(--container-pi);
     }
     .header__menu.active {
         transform: translateX(0);
+    }
+    .menu-header__list {
+        flex-direction: column;
+        align-self: stretch;
     }
     .menu-header__link {
         text-align: right;
