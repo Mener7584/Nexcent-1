@@ -310,13 +310,7 @@ li {
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-end;
-        overflow: auto;
-        row-gap: 20rem;
-        background-color: var(--color-primary);
-        transition: tranform var(--transition-main);
         transform: translateX(100%);
-        padding-block: calc(var(--header-min) + 2rem) 10rem;
-        padding-inline: var(--container-pi);
     }
     .header__menu.active {
         transform: translateX(0);
