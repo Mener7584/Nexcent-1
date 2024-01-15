@@ -318,7 +318,7 @@ li {
         position: fixed;
         z-index: 1;
         top: 0;
-        left: 0;
+        left: -100%;
         width: min(260rem, 100%);
         height: 100vh;
         display: flex;
@@ -328,10 +328,12 @@ li {
         overflow-y: auto;
         row-gap: 20rem;
         background-color: var(--color-primary);
-        transition: tranform var(--transition-main);
-    
+        transition: left var(--transition-main);
         padding-block: calc(var(--header-min) + 2rem) 10rem;
         padding-inline: var(--container-pi);
+    }
+    .header__menu.active{
+        left: 0;
     }
     .menu-header__list {
         flex-direction: column;
