@@ -299,6 +299,15 @@ li {
     }
 }
 @media (max-width: 47.99875em) {
+    .header__container::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100dvw;
+        height: var(--header-min);
+        background-color: var(--color-secondary-light);
+    }
     .menu-header__link {
         text-align: right;
         width: 100%;
