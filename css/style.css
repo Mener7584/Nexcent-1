@@ -308,6 +308,26 @@ li {
         height: var(--header-min);
         background-color: var(--color-secondary-light);
     }
+    .header__menu {
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        width: min(260rem, 100%);
+        height: 100svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        overflow-y: auto;
+        row-gap: 20rem;
+        background-color: var(--color-primary);
+        transition: translate var(--transition-main);
+        translate: 100%;
+        padding-block: calc(var(--header-min) + 2rem) 10rem;
+        will-change: auto;
+        padding-inline: var(--container-pi);
+    }
     .menu-header__link {
         text-align: right;
         width: 100%;
