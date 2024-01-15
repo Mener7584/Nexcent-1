@@ -330,7 +330,6 @@ li {
         background-color: var(--color-primary);
         transition: var(--transition-main);
         padding-block: calc(var(--header-min) + 2rem) 10rem;
-        will-change: auto;
         padding-inline: var(--container-pi);
     }
     .header__menu.active {
