@@ -333,7 +333,7 @@ li {
         padding-inline: var(--container-pi);
     }
     .header__menu.active{
-        transform: translateX(-100%);
+        transform: translateX(100%);
     }
     .menu-header__list {
         flex-direction: column;
