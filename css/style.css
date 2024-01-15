@@ -329,7 +329,7 @@ li {
         row-gap: 20rem;
         background-color: var(--color-primary);
         transition: transform var(--transition-main);
-        transform: translateX(-100%);
+        transform: translateX(100%);
         padding-block: calc(var(--header-min) + 2rem) 10rem;
         padding-inline: var(--container-pi);
     }
