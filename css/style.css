@@ -298,3 +298,105 @@ li {
         padding-inline: 14rem;
     }
 }
+@media (max-width: 47.99875em) {
+    .header__container::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100dvw;
+        height: var(--header-min);
+        background-color: var(--color-secondary-light);
+    }
+    .header__logo,
+    .header__burger,
+    .header__container::before,
+    .header {
+        z-index: 2;
+    }
+    .header__menu {
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        width: min(260rem, 100%);
+        height: 100svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        overflow-y: auto;
+        row-gap: 20rem;
+        background-color: var(--color-primary);
+        transition: translate var(--transition-main);
+        translate: 100%;
+        padding-block: calc(var(--header-min) + 2rem) 10rem;
+        will-change: auto;
+        padding-inline: var(--container-pi);
+    }
+    .header__menu.active {
+        translate: 0;
+    }
+    .menu-header__list {
+        flex-direction: column;
+        align-self: stretch;
+    }
+    .menu-header__link {
+        text-align: right;
+        width: 100%;
+        display: block;
+        color: var(--color-secondary-light);
+        line-height: 1.8;
+        font-size: 30rem;
+    }
+    .menu-header__action {
+        display: flex;
+        align-self: stretch;
+        column-gap: 10rem;
+    }
+    .menu-header__action > button {
+        flex-grow: 1;
+    }
+    .header__action {
+        display: none;
+    }
+    .header__burger {
+        --width: 30rem;
+        --height: 20rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: var(--width);
+        height: var(--height);
+    }
+    .header__burger::before,
+    .header__burger::after,
+    .header__burger span {
+        content: "";
+        position: absolute;
+        background-color: var(--color-secondary-dark);
+        width: 100%;
+        height: var(--height-el);
+        --height-el: 2rem;
+        right: 0;
+        transition: 0.2s;
+    }
+    .header__burger span {
+        transform: scale(1);
+    }
+    .header__burger::before {
+        transform: translateY(calc(var(--height) / -2 + 50%));
+    }
+    .header__burger::after {
+        transform: translateY(calc(var(--height) / 2 - var(--height-el) + 50%));
+    }
+    .header__burger.active span {
+        transform: scale(0);
+    }
+    .header__burger.active::before {
+        transform: rotate(-45deg);
+    }
+    .header__burger.active::after {
+        transform: rotate(45deg);
+    }
+}
