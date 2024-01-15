@@ -303,14 +303,14 @@ li {
         position: fixed;
         z-index: 1;
         top: 0;
-        right: 0;
+        left: 0;
         width: 260rem;
         height: 100svh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-end;
-        transform: translateX(100%);
+        transform: translateX(-100%);
     }
     .header__menu.active {
         transform: translateX(0);
