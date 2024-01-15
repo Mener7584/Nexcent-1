@@ -322,10 +322,13 @@ li {
         overflow: auto;
         row-gap: 20rem;
         background-color: var(--color-primary);
-        transition: translate var(--transition-main);
-        translate: 100%;
+        transition: tranform var(--transition-main);
+        tranform: translateX(100%);
         padding-block: calc(var(--header-min) + 2rem) 10rem;
         padding-inline: var(--container-pi);
+    }
+    .header__menu.active {
+        tranform: translateX(0);
     }
     .menu-header__link {
         text-align: right;
