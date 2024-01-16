@@ -9,6 +9,7 @@
         <link rel="preload" href="fonts/Inter/Inter-Regular.woff2" as="font" type="font/woff2" />
         <link rel="preload" href="fonts/Inter/Inter-Medium.woff2" as="font" type="font/woff2" />
         <link rel="preload" href="fonts/Inter/Inter-SemiBold.woff2" as="font" type="font/woff2" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="css/style.css" />
         <script defer src="js/script.js"></script>
     </head>
@@ -44,7 +45,7 @@
                             <li class="menu-header__item"><a href="#" class="menu-header__link">FAQ</a></li>
                         </ul>
                         <div class="menu-header__action">
-                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" type="button" class="menu-header__button button button_small button_white">Login</a>
+                            <a href="#" type="button" class="menu-header__button button button_small button_white">Login</a>
                             <a href="#" type="button" class="menu-header__button button button_small button_white">Sign up</a>
                         </div>
                     </nav>
@@ -55,8 +56,62 @@
                     <button type="button" class="header__burger"><span></span></button>
                 </div>
             </header>
-            <main class="main"></main>
+            <main class="main">
+                <div class="overlay"></div>
+                <section class="hero">
+                    <div class="hero__container">
+                        <div class="hero__swiper swiper">
+                            <div class="hero__wrapper swiper-wrapper">
+                                <div class="hero__slide swiper-slide">
+                                    <div class="hero__block block-hero block-header">
+                                        <h1 class="block-header__title block-header__title_big">
+                                            Lessons and insights <span>from 8 years</span>
+                                        </h1>
+                                        <div class="block-header__text block-hero__text">
+                                            <p>Where to grow your business as a photographer: site or social media?</p>
+                                        </div>
+                                        <button type="button" class="block-header__button button">Register</button>
+                                    </div>
+                                    <div class="hero__image">
+                                        <img src="./img/hero/01.webp" width="391" height="407" alt="Slider image" />
+                                    </div>
+                                </div>
+                                <div class="hero__slide swiper-slide">
+                                    <div class="hero__block block-hero block-header">
+                                        <h1 class="block-header__title block-header__title_big">
+                                            Lessons and insights <span>from 8 years</span>
+                                        </h1>
+                                        <div class="block-header__text block-hero__text">
+                                            <p>Where to grow your business as a photographer: site or social media?</p>
+                                        </div>
+                                        <button type="button" class="block-header__button button">Register</button>
+                                    </div>
+                                    <div class="hero__image">
+                                        <img src="./img/hero/01.webp" width="391" height="407" alt="Slider image" />
+                                    </div>
+                                </div>
+                                <div class="hero__slide swiper-slide">
+                                    <div class="hero__block block-hero block-header">
+                                        <h1 class="block-header__title block-header__title_big">
+                                            Lessons and insights <span>from 8 years</span>
+                                        </h1>
+                                        <div class="block-header__text block-hero__text">
+                                            <p>Where to grow your business as a photographer: site or social media?</p>
+                                        </div>
+                                        <button type="button" class="block-header__button button">Register</button>
+                                    </div>
+                                    <div class="hero__image">
+                                        <img src="./img/hero/01.webp" width="391" height="407" alt="Slider image" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </section>
+            </main>
             <footer class="footer"></footer>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </body>
 </html>

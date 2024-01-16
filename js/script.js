@@ -30,3 +30,19 @@ function burgerMenu() {
 }
 
 burgerMenu();
+
+const swiper = new Swiper(".swiper", {
+    simulateTouch: true,
+    speed: 500,
+    keyboard: true,
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        768: {
+            simulateTouch: false,
+        },
+    },
+});
